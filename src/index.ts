@@ -1,1 +1,11 @@
-console.log("hallo");
+import { formData } from "./form";
+
+const form = document.querySelector("form")! as HTMLFormElement;
+form.addEventListener("submit", (e) => {
+  e.preventDefault();
+  const data = formData(form);
+  console.log(data);
+});
+
+const person: any = {};
+console.log(person.speak());
